@@ -63,3 +63,5 @@ if uploaded_file and st.button("🎨 Générer l’image modifiée"):
         result_b64 = edit_image(image_b64, mask_b64, prompt)
         result_img = Image.open(BytesIO(base64.b64decode(result_b64)))
         st.image(result_img, caption="✅ Image modifiée", use_column_width=True)
+
+# Déploiement forcé pour Azure
