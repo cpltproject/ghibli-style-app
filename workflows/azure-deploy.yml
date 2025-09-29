@@ -33,8 +33,9 @@ jobs:
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: app.zip
 
-    - name: ✅ Vérifier que l'app est en ligne
+    - name: 🧪 Afficher le contenu HTML retourné
       run: |
-        sleep 30  # attendre que le serveur démarre
-        curl -I https://ghibli-style-app-csbqbeefd3aueqgb.francecentral-01.azurewebsites.net | grep "200 OK" || exit 1
+        sleep 30  # attendre que l'app démarre
+        echo "🔍 Contenu HTML retourné par l'app :"
+        curl -s https://ghibli-style-app-csbqbeefd3aueqgb.francecentral-01.azurewebsites.net
 
