@@ -8,8 +8,9 @@ from io import BytesIO
 import os
 
 # === CONFIGURATION AZURE ===
-#AZURE_ENDPOINT = "https://ghibli-style-app-csbqbeefd3aueqgb.francecentral-01.azurewebsites.net"
-AZURE_ENDPOINT = "https://aicl-mg4fnqyi-eastus2.services.ai.azure.com/openai/deployments/FLUX.1-Kontext-pro/images/generations?api-version=2025-04-01-preview"
+AZURE_ENDPOINT = "https://ghibli-style-app-csbqbeefd3aueqgb.francecentral-01.azurewebsites.net"
+#AZURE_ENDPOINT = "https://aicl-mg4fnqyi-eastus2.services.ai.azure.com/openai/deployments/FLUX.1-Kontext-pro/images/generations?api-version=2025-04-01-preview"
+
 # DEPLOYMENT_NAME = "ghibli-flux"  # ← remplace par le nom réel du déploiement
 DEPLOYMENT_NAME = "FLUX.1-Kontext-pro"
 #FLUX.1-Kontext-pro
