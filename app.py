@@ -4,6 +4,8 @@ import base64
 from PIL import Image
 from io import BytesIO
 
+# hop
+
 # === CONFIGURATION AZURE ===
 API_KEY = "53RzhbQijGJtsrjraeGCY6ouyyIqMUA1iBVAmPS6WPkj9vTKGWawJQQJ99BIACfhMk5XJ3w3AAAAACOGuZFE"
 API_VERSION = "2025-04-01-preview"
