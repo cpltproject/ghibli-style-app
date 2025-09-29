@@ -26,12 +26,19 @@ jobs:
     - name: 📁 Create deployment package
       run: zip -r app.zip . -x "*.git*" "*.github*" "app.zip"
 
-    - name: 🚀 Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
+    - name: 🔑 Azure Login
+      uses: azure/login@v1
       with:
-        app-name: ghibli-style-app
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: app.zip
+      creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: 🚀 Deploy to Azure Web App (Linux)
+      run: |
+      az webapp deploy \
+        --name ghibli-style-app \
+        --resource-group ghibli-style-app_group \
+        --src-path app.zip \
+        --type zip
+
 
     - name: 🧪 Afficher le contenu HTML retourné
       run: |
