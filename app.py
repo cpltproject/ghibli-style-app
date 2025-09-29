@@ -9,6 +9,8 @@ API_KEY = "53RzhbQijGJtsrjraeGCY6ouyyIqMUA1iBVAmPS6WPkj9vTKGWawJQQJ99BIACfhMk5XJ
 API_VERSION = "2025-04-01-preview"
 DEPLOYMENT = "deploiement-FLUX.1-Kontext-pro"
 BASE_URL = "https://projet-flux1-kontext-pr-resource.services.ai.azure.com"
+#
+
 
 GENERATION_URL = f"{BASE_URL}/openai/deployments/{DEPLOYMENT}/images/generations?api-version={API_VERSION}"
 EDIT_URL = f"{BASE_URL}/openai/deployments/{DEPLOYMENT}/images/edits?api-version={API_VERSION}"
