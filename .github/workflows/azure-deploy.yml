@@ -12,7 +12,7 @@ jobs:
     - name: 📥 Checkout code!
       uses: actions/checkout@v3
 
-    - name: 🐍 Set up Python thon
+    - name: 🐍 Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
@@ -29,16 +29,15 @@ jobs:
     - name: 🔑 Azure Login
       uses: azure/login@v1
       with:
-      creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: 🚀 Deploy to Azure Web App (Linux)
       run: |
-      az webapp deploy \
-        --name ghibli-style-app \
-        --resource-group ghibli-style-app_group \
-        --src-path app.zip \
-        --type zip
-
+        az webapp deploy \
+          --name ghibli-style-app \
+          --resource-group ghibli-style-app_group \
+          --src-path app.zip \
+          --type zip
 
     - name: 🧪 Afficher le contenu HTML retourné
       run: |
